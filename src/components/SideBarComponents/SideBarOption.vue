@@ -7,9 +7,9 @@ defineProps({
 </script>
 <template>
   <div
-    class="size-fit text-SideBarItems justify-items-start hover:text-white grid grid-cols-[33px_219px]"
+    class="size-fit text-SideBarItems justify-items-start hover:text-white flex"
   >
-    <component :is="Icon" class="mr-2 mt-[1px] size-[20px]"></component>
-    <span class="text-[15px]">{{ Name }} </span>
+    <component :is="Icon" class="size-4"></component>
+    <span class="text-4">{{ Name }} </span>
   </div>
 </template>

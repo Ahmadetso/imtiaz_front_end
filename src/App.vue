@@ -4,9 +4,9 @@ import MainContent from './components/ContentComponents/MainContent.vue'
 </script>
 
 <template>
-  <main class="grid rtl:grid-cols-[256px_1fr] h-screen" dir="rtl">
+  <main class="flex size-full" dir="rtl">
     <side-bar />
-    <MainContent class="" />
+    <MainContent />
   </main>
 </template>
 

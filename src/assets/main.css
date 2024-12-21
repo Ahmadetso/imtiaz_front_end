@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-br from-SideBarTop via-blue-200 to-SideBarTop;
   font-family: 'Rubik', sans-serif;
   font-optical-sizing: 14px;
   font-weight: normal;

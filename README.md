@@ -1,4 +1,4 @@
-# wafeq_clone
+# Imtiaz Front end
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -39,4 +39,5 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
 # imtiaz_front_end

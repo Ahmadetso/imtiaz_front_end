@@ -4,40 +4,32 @@ import SideBarOption from './SideBarOption.vue'
 import SideBarSearch from './SideBarSearch.vue'
 import SideBarDropdownOption from './SideBarDropdownOption.vue'
 import SideBarDropdown from './SideBarDropdown.vue'
-import IconData from '../icons/IconData.vue'
-import IconReports from '../icons/IconReports.vue'
+// import IconData from '../icons/IconData.vue'
+// import IconReports from '../icons/IconReports.vue'
 import IconControlPanel from '../icons/IconControlPanel.vue'
-import IconTruck from '../icons/IconTruck.vue'
-import IconCostumers from '../icons/IconCostumers.vue'
-import IconBox from '../icons/IconBox.vue'
-import IconSafeBox from '../icons/IconSafeBox.vue'
-import IconMoney from '../icons/IconMoney.vue'
-import IconPeople from '../icons/IconPeople.vue'
-import IconSettings from '../icons/IconSettings.vue'
+// import IconTruck from '../icons/IconTruck.vue'
+// import IconCostumers from '../icons/IconCostumers.vue'
+// import IconBox from '../icons/IconBox.vue'
+// import IconSafeBox from '../icons/IconSafeBox.vue'
+// import IconMoney from '../icons/IconMoney.vue'
+// import IconPeople from '../icons/IconPeople.vue'
+// import IconSettings from '../icons/IconSettings.vue'
 
 // defineProps([])
 </script>
 <template>
   <aside
-    class="grid w-full h-screen bg-SideBarBlue shadow-sm auto-rows-min grid-cols-1 gap-3"
+    class="w-64 h-screen bg-SideBarBlue shadow-sm rtl:flex-col-revers gap-3"
   >
-    <div class="w-64 h-10 z-10 bg-SideBarTop"></div>
+    <div class="w-full h-10 z-10 bg-SideBarTop"></div>
 
     <SideBarSearch />
 
     <SideBarOption :Icon="IconControlPanel" Name="لوحة التحكم" />
 
     <side-bar-dropdown Name="المبيعات" :Icon="IconSales">
-      <SideBarDropdownOption Name="إدارة الفواتير" QuickCreate="true" />
-      <SideBarDropdownOption Name="انشاء فاتورة" QuickCreate="true" />
-      <SideBarDropdownOption Name="إدارة عروض الاسعار" />
-      <SideBarDropdownOption Name="الفواتير المرتجعة" />
-      <SideBarDropdownOption Name="الفواتير الدورية" />
-      <SideBarDropdownOption Name="إشعارات دائنة" />
-      <SideBarDropdownOption Name="الفواتير الدورية" />
-      <SideBarDropdownOption Name="مدفوعات العملاء" />
-      <SideBarDropdownOption Name="اعدادات المبيعات" />
-    </side-bar-dropdown>
+      <SideBarDropdownOption Name="إدارة الفواتير" /> </side-bar-dropdown
+    ><!--
     <side-bar-dropdown Name="المشتريات" :Icon="IconTruck">
       <side-bar-dropdown-option Name="فواتير الشراء" />
       <side-bar-dropdown-option Name="مرتجعات المشتريات" />
@@ -105,6 +97,6 @@ import IconSettings from '../icons/IconSettings.vue'
       <side-bar-dropdown-option -name="إعدادات الضرائب" />
       <side-bar-dropdown-option -name="إدارة التطبيقات" />
       <side-bar-dropdown-option -name="تخصيص التطبيق" />
-    </side-bar-dropdown>
+    </side-bar-dropdown> -->
   </aside>
 </template>
