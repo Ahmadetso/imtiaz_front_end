@@ -1,14 +1,16 @@
 <script setup>
-import IconBarsArrowDown from '../icons/IconBarsArrowDown.vue'
 defineProps({
-  name: String,
+  title: String,
+  type: String,
+  icon: Object,
 })
 </script>
 <template>
-  <div
-    class="size-full p-4 flex justify-center hover:bg-gray-50 bg-white border-x-[1px]"
+  <button
+    class="size-full p-4 flex justify-center hover:bg-gray-50 bg-white"
+    :type="type"
   >
-    <span class="px-2">{{ name }}</span>
-    <IconBarsArrowDown class="mt-1" />
-  </div>
+    <span class="px-2">{{ title }}</span>
+    <component :is="icon" />
+  </button>
 </template>

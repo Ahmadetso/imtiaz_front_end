@@ -1,5 +1,5 @@
 <script setup>
-import IconPlus from './icons/IconPlus.vue'
+import IconPlus from '../../icons/IconPlus.vue'
 </script>
 <template>
   <button

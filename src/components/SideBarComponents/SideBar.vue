@@ -18,18 +18,16 @@ import IconControlPanel from '../icons/IconControlPanel.vue'
 // defineProps([])
 </script>
 <template>
-  <aside class="w-64 h-screen bg-SideBarBlue shadow-sm flex flex-col gap-2">
+  <aside class="w-1/4 h-screen bg-SideBarBlue shadow-sm flex flex-col gap-2">
     <div class="w-full h-10 bg-SideBarTop"></div>
 
     <SideBarSearch class="" />
     <hr
-      class="h-[2px] w-full bg-gradient-to-l border-0 from-SideBarTop to-transparent"
+      class="h-[2px] w-full bg-gradient-to-l from-transparent via-SideBarTop to-trasparent border-0"
     />
 
     <SideBarOption :Icon="IconControlPanel" Name="لوحة التحكم" />
-    <hr
-      class="h-[2px] w-full bg-gradient-to-l from-SideBarTop to-transparent border-0"
-    />
+    <hr class="h-[2px] w-full bg-SideBarTop border-0" />
 
     <side-bar-dropdown Name="المبيعات" :Icon="IconSales">
       <SideBarDropdownOption

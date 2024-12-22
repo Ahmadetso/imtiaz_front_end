@@ -21,7 +21,7 @@ export default {
 
       colors: {
         SideBarBlue: '#0f172a',
-        SideBarTop: '#247dbd',
+        SideBarTop: '#b1e5f2',
         SideBarUser: '#2B3248',
         OtherSideBar: '#3c445e',
         ContentBG: '#ffffff',

@@ -2,9 +2,12 @@
 import NumbersInput from './inputs/NumbersInput.vue'
 import TextInput from './inputs/TextInput.vue'
 import DropdownInput from './inputs/DropdownInput.vue'
-import AddButton from '../AddButton.vue'
-import ButtonIcon from '../ReusableComponents/ButtonIcon.vue'
-import IconBarsArrowDown from '../icons/IconBarsArrowDown.vue'
+import AddButton from './buttons/AddButton.vue'
+import ButtonIcon from './buttons/ButtonIcon.vue'
+// import IconBarsArrowDown from '../icons/IconBarsArrowDown.vue'
+import IconTruck from '../icons/IconTruck.vue'
+import IconPaid from '../icons/IconPaid.vue'
+import IconPercentage from '../icons/IconPercentage.vue'
 </script>
 <template>
   <div class="relative grid shadow-md grid-cols-1">
@@ -59,7 +62,9 @@ import IconBarsArrowDown from '../icons/IconBarsArrowDown.vue'
         <add-button class="size-12" />
       </div>
 
-      <ButtonIcon name="خيارات اضافية" :icon="IconBarsArrowDown" />
+      <ButtonIcon title="بيانات الشحن" :icon="IconTruck" />
+      <ButtonIcon title="المدفوع" :icon="IconPaid" />
+      <ButtonIcon title="الخصم" :icon="IconPercentage" />
 
       <table class="bg-white flex items-start">
         <tbody>
@@ -75,7 +80,7 @@ import IconBarsArrowDown from '../icons/IconBarsArrowDown.vue'
         </tbody>
       </table>
     </div>
-    <div class="h-24 border-t-[1px] border-b-0 p-2 w-full bg-white"></div>
+    <!-- <div class="h-24 border-t-[1px] border-b-0 p-2 w-full bg-white"></div> -->
   </div>
   <hr class="w-full my-2" />
 </template>
