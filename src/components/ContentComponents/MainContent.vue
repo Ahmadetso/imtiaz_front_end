@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="grid place-content-center size-full">
+  <div class="grid content-start justify-center size-full">
     <router-view />
   </div>
 </template>

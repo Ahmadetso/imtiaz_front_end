@@ -11,7 +11,7 @@ let IsActive = ref(false)
 <template>
   <div
     :class="{ 'bg-SideBarMultiSelection': IsActive }"
-    class="w-full h-fit rounded-md group transition-all transform ease-out duration-[20ms]"
+    class="w-full h-fit rounded-md transition-all transform"
   >
     <button
       @click="IsActive = !IsActive"
@@ -19,13 +19,29 @@ let IsActive = ref(false)
     >
       <component :is="Icon" class="size-6"></component>
       <span class="font-normal">{{ Name }} </span>
-      <IconArrow class="size-6" />
+
+      <IconArrow
+        class="size-6 transition-transform duration-200"
+        :class="{
+          'rotate-0': !IsActive,
+          '-rotate-90': IsActive,
+        }"
+      />
     </button>
-    <ul
-      class="w-full items-center h-fit mt-2 pb-1 text-SideBarItems"
-      v-if="IsActive"
+    <transition
+      enter-active-class="transition-opacity duration-200"
+      leave-active-class="transition-opacity duration-200"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
     >
-      <slot> </slot>
-    </ul>
+      <ul
+        class="w-full items-center h-fit mt-2 pb-1 text-SideBarItems"
+        v-if="IsActive"
+      >
+        <slot></slot>
+      </ul>
+    </transition>
   </div>
 </template>

@@ -34,13 +34,5 @@ defineProps({
         {{ QuickCreate }}
       </span>
     </router-link>
-    <!-- <div>
-        <IconPlus
-          v-if="QuickCreate"
-          class="size-3 hover:text-white opacity-0 col-span-1 group-hover:opacity-100 transform transition-all ease-out"
-        /></div
-        >
-
-      >-->
   </li>
 </template>
