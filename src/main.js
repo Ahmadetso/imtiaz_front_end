@@ -1,6 +1,7 @@
 import './assets/main.css'
 import 'flowbite'
 import 'flowbite-datepicker'
+import 'simple-datatables'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

@@ -31,5 +31,9 @@ export default {
       },
     },
   },
-  plugins: [flowbite],
+  plugins: [
+    flowbite({
+      datatables: true,
+    }),
+  ],
 }
