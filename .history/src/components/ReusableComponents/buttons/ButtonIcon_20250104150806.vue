@@ -1,0 +1,25 @@
+<script setup>
+import { Button } from 'primevue'
+defineProps({
+  title: String,
+  type: String,
+  icon: Object,
+})
+</script>
+<template>
+  <Button :label="label" iconPos="left" class="" :type="type">
+    <component :is="icon" />
+  </Button>
+</template>
+<style scoped>
+.p-button {
+  background-color: #1c1b22;
+  color: #9999a2;
+}
+.p-button:hover {
+  --p-button-primary-hover-background: #1c1b22;
+  border-color: aqua;
+
+  color: #9999a2;
+}
+</style>

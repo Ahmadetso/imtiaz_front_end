@@ -1,0 +1,45 @@
+<script setup>
+import DatePicker from '@/components/ReusableComponents/inputs/DatePicker.vue'
+import DropdownInput from '@/components/ReusableComponents/inputs/DropdownInput.vue'
+import ItemsCreationTable from '@/components/ReusableComponents/ItemsCreationTable.vue'
+import TextArea from '@/components/ReusableComponents/inputs/TextArea.vue'
+import CheckBox from '@/components/ReusableComponents/buttons/CheckBox.vue'
+import IconSave from '@/components/icons/IconSave.vue'
+import ButtonIcon from '@/components/ReusableComponents/buttons/ButtonIcon.vue'
+import IconPrinter from '@/components/icons/IconPrinter.vue'
+</script>
+
+<template>
+  <div class="grid size-full px-10 bg-white dark:bg-SideBarBlue">
+    <div class="flex">
+      <h4 class="w-full text-5xl mt-3">إنشاء الفواتير</h4>
+      <h4 class="w-full text-6xl mt-2" dir="ltr">INV-0001</h4>
+    </div>
+
+    <hr class="border-2 my-2" />
+    <div class="flex justify-evenly">
+      <dropdown-input class="h-full mx-2" title="العميل" />
+      <date-picker title="تاريخ الفاتورة" />
+
+      <date-picker title="تاريخ ألإستحقاق" />
+      <dropdown-input title="العملة"> </dropdown-input>
+    </div>
+    <hr class="border-4 my-2" />
+
+    <items-creation-table />
+    <text-area />
+    <hr class="w-full my-2" />
+    <div
+      class="h-10 flex justify-around items-center border p-2 w-full bg-white"
+    >
+      <CheckBox title="مدفوع بالكامل" />
+      <CheckBox title="أدرج عنوان العميل" />
+      <CheckBox title="أدرج عنوان الشحن" />
+    </div>
+    <hr class="w-full my-2" />
+    <div class="h-20 border p-2 w-full bg-white dark:bg-SideBarBlue flex">
+      <button-icon title="إحفظ وإطبع" type="submit" :icon="IconPrinter" />
+      <button-icon title="إحفظ بدون طباعة" type="submit" :icon="IconSave" />
+    </div>
+  </div>
+</template>

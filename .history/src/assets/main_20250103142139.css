@@ -1,0 +1,17 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-optical-sizing: 14px;
+  font-weight: normal;
+  font-style: normal;
+}

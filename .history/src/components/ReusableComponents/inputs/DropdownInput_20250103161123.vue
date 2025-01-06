@@ -1,0 +1,50 @@
+<template>
+  <div class="card flex w-full items-center justify-center">
+    <FloatLabel variant="on">
+      <AutoComplete
+        v-model="value"
+        inputId="on_label"
+        dropdown
+        :suggestions="items"
+        @complete="search"
+      />
+      <label for="dropdown">{{ label }}</label>
+    </FloatLabel>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import FloatLabel from 'primevue/floatlabel'
+
+import AutoComplete from 'primevue/autocomplete'
+
+const value = ref('')
+const items = ref([])
+defineProps({
+  label: String,
+  suggestions: Array,
+})
+const search = event => {
+  let _items = [...Array(10).keys()]
+
+  items.value = event.query
+    ? [...Array(10).keys()].map(item => event.query + '-' + item)
+    : _items
+}
+</script>
+
+<!-- <script setup>
+
+</script>
+<template>
+  <div class="">
+
+    <select
+      id="countries"
+      class="bg-gray-50 block border border-gray-300 size-full text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
+    >
+      <slot> </slot>
+    </select>
+  </div>
+</template> -->
