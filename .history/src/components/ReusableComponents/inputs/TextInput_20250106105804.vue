@@ -13,7 +13,7 @@ defineProps({
   </FloatLabel>
 </template> -->
 
-<script setup>
+<!-- <script setup>
 import FloatLabel from 'primevue/floatlabel'
 import InputText from 'primevue/inputtext'
 
@@ -39,4 +39,4 @@ const inputValue = computed({
     <InputText id="on_label" type="text" v-model="inputValue" />
     <label for="on_label">{{ label }}</label>
   </FloatLabel>
-</template>
+</template> -->
